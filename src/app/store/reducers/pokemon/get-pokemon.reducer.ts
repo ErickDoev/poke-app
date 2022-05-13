@@ -26,7 +26,8 @@ const _pokemonReducer = createReducer(initialState,
         ...state,
         loading: false,
         loaded: true,
-        entity: payload
+        entity: payload,
+        error: null
     })),
     on(getPokemonError, (state, { error }) => ({
         ...state,

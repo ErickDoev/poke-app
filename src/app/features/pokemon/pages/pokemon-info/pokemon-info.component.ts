@@ -19,6 +19,7 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
 
   pokemon?: PokemonUtilInfo | null;
   isLoading$ = this.pokemonFacade.isLoading$;
+  error$ = this.pokemonFacade.error$;
   pokemonSubscription$: Subscription | undefined;
 
   specie?: Specie | null;
