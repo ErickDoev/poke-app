@@ -1,0 +1,46 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    background: white;
+}
+
+.red{
+    background-color: white;
+    border: 0;
+}
+.nav-l, .nav-r{
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.nav-r{
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.nav-l{
+    justify-content: flex-start;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+}
+
+.img-p{
+    margin: 0;
+}
+
+hr{
+    margin: 0;
+}

@@ -1,0 +1,22 @@
+<app-input-search></app-input-search>
+<div class="container">
+    <div class="list-container">
+        <div class="list-container-item" *ngFor="let pokemon of pokemons">
+           <a [routerLink]="['/pokemons', pokemon.id]">
+                <app-card  [imgUrl] = "pokemon.img" [name] = "pokemon.name" [id] = "pokemon.id">
+                    {{pokemon.name}}
+                </app-card>  
+           </a>
+        </div>
+    </div>
+</div>
+<div class="paginado">
+    <button 
+        mat-raised-button 
+        color="primary"
+        (click)="onPrev()">Prev</button>
+    <button 
+        mat-raised-button 
+        color="primary"
+        (click)="onNext()">Next</button>
+</div>

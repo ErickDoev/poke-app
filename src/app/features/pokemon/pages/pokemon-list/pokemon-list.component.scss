@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 44px;
+}
+
+.list-container-item{
+    width: 7rem;
+}
+
+.paginado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,51 @@
+.input-search{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form-table{
+    position: absolute;
+    top: 1px;
+    right: px;
+    z-index: 1;
+    left: 200px;
+}
+
+.table {
+    z-index: 1;
+    background-color: white;
+    border: solid black 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+
+hr{
+    width: 100%;
+    color: gray;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: 3px;
+}
+
+a:hover{
+    color: red;
+}

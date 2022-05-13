@@ -1,0 +1,31 @@
+<nav ngbNav class="nav">
+    <div class="nav-l">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bJfMI_7Y8q1afFWdvchzgAZOtkuTX-fgKRyFOwgFKTZrYdufSWZZKUBUgCdgUPXk07w&usqp=CAU" alt="logo"
+          class="img">
+        <p class="img-p">PokeApp v1.0</p>
+    </div>
+    <div class="nav-r">
+        <button 
+            mat-icon-button 
+            [matMenuTriggerFor]="menu" 
+            aria-label="Example icon-button with a menu"
+            class="red">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item 
+                ngbNavLink
+                routerLink="/pokemons">
+              <mat-icon>dialpad</mat-icon>
+              <span>Pokemon list</span>
+            </button>
+            <button mat-menu-item ngbNavLink routerLink="/about">
+                <mat-icon>person</mat-icon>
+                <span>About me</span>
+              </button>
+          </mat-menu>
+    </div>
+</nav>
+<hr>
+<router-outlet></router-outlet>

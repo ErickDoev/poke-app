@@ -1,0 +1,28 @@
+<div class="input-search">
+    <div class="form-container">
+        <form>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Search Pokemon</mat-label>
+                <input 
+                    matInput type="text" 
+                    #txtSeacrh
+                    autocomplete="off"
+                    (keyup)="onSearchPokemon(txtSeacrh.value)"/>
+              </mat-form-field>
+        </form>
+        <div 
+            *ngIf="search.length > 0"
+            class="form-table">
+            <table *ngIf="search.length > 0" class="table">
+                <tr>
+                  <th>Pokemons: </th>
+                </tr>
+                <tr *ngFor="let pokemon of pokemons! | filtro:search">
+                    <hr>
+                    <a [routerLink]="[id]"><td (click)="onClick(pokemon)">{{pokemon.name}}</td></a>
+                </tr>
+              </table>
+
+        </div>
+    </div>
+</div>

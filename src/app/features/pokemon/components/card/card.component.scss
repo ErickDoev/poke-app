@@ -1,0 +1,26 @@
+img{
+    object-fit: contain;
+    width: 5rem;
+    height: 5rem;
+}
+
+p{
+    text-align: center;
+    margin: 0;
+}
+
+.card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text{
+    color: black;
+    font-weight: 700;
+}
+
+.card{
+    box-shadow: none;
+}
+
