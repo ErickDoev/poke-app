@@ -1,14 +1,20 @@
-<mat-card class="card">
+<div class="list-container-item">
+  <mat-card class="card">
     <div class="card-img">
       <img mat-card-image [src]="imgUrl" alt="name">
     </div>
-  <mat-card-content>
-    <p class="card-text">
-      {{name | titlecase}}
-    </p>
-    <p>
-      # {{id}}
-    </p>
-  </mat-card-content>
-
-</mat-card>
+    <mat-card-content>
+      <div class="card-text">
+        <a 
+          class="text" 
+          [routerLink]="['/pokemons', id]"
+        >
+          {{name | titlecase}}
+        </a>
+      </div>
+      <p>
+        # {{id}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,7 +1,7 @@
 img{
     object-fit: contain;
-    width: 5rem;
-    height: 5rem;
+    width: 250px;
+    height: 250px;
 }
 
 p{
@@ -16,6 +16,11 @@ p{
 }
 
 .card-text{
+    display: flex;
+    justify-content: center;
+}
+
+.text{
     color: black;
     font-weight: 700;
 }
@@ -23,4 +28,3 @@ p{
 .card{
     box-shadow: none;
 }
-

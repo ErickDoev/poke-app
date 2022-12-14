@@ -64,7 +64,7 @@ export class PokemonService {
 
   getPokemonList(url: string | undefined): Observable<PokemonList>{
     if(!url){
-      url = `${this.url}/pokemon?offset=0&limit=20`
+      url = `${this.url}/pokemon?offset=0&limit=21`
     }
     return this.http.get<PokemonListResponse>(url)
       .pipe(map( (resp) => {
