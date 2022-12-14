@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { PokemonUtilInfo, Specie } from 'src/app/models/pokemon.model';
 import { GetPokemonsFacade } from 'src/app/store/facades/pokemon/get-pokemon.facace';
@@ -28,7 +28,8 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private pokemonFacade: GetPokemonsFacade,
-    private specieFacade: GetSpecieFacade) { }
+    private specieFacade: GetSpecieFacade,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -45,6 +46,10 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
       this.color = ent?.color.name;
       this.text = ent?.flavor_text_entries[0].flavor_text;
     })
+  }
+
+  onBack(){
+    this.router.navigateByUrl('pokemons')
   }
 
   ngOnDestroy(): void {

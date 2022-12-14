@@ -2,10 +2,10 @@
     <div class="main">
         <div class="card" [class]="color">
             <div class="card-header">
-                <div class="icon">
-                    <a [routerLink]="['/pokemons']">
-                        <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
-                    </a>
+                <div 
+                    class="icon"
+                    (click)="onBack()">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
                 </div>
                 <div class="card-title-group">
                     <div class="card-title">
@@ -29,7 +29,7 @@
                         class="card-spinner"
                         *ngIf="(isLoading$ | async); else img"></mat-spinner>
                     <ng-template #img>
-                        <img class="card-img-info" mat-card-sm-image [src]="pokemon?.img">
+                        <img class="card-img-info" [src]="pokemon?.img">
                     </ng-template>
                     <p>{{text}}</p>
                     </div>
