@@ -6,6 +6,7 @@ import { CardModule } from '../../components/card/card.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { InputSearchModule } from '../../components/input-search/input-search.module';
+import { HeaderModule } from 'src/app/features/ui-components/header/header.module';
 
 const routes: Routes = [ 
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
     CardModule,
     MatGridListModule,
     MatButtonModule,
-    InputSearchModule
+    InputSearchModule,
+    HeaderModule
   ], 
   exports: [PokemonListComponent]
 })
