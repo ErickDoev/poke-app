@@ -40,6 +40,18 @@
             </div>
             <div class="h-245">
                 <div class="section-container">
+                    <p class="section-title flex-1">Stats</p>
+                    <div class="section-content flex-2">
+                        <app-statistics-bars 
+                                *ngFor="let stat of pokemon?.stats" 
+                                [statName]="stat.stat | titlecase" 
+                                [statValue]="stat.valueStat"
+                                [color]="color">
+                        </app-statistics-bars>
+                    </div>
+                </div>
+
+                <div class="section-container">
                     <p class="section-title flex-1">Info</p>
                     <div class="section-content flex-2">
                         <div class="table">
@@ -49,39 +61,13 @@
                                 <p class="stats-text">Weight: {{pokemon?.weight}}</p>
                                 <p class="stats-text">Abilities: {{pokemon!.abilities[0]}}</p>
                             </div>
-                            <!-- <div class="stats">
-                                <p class="stats-text">{{specie?.habitat?.name | titlecase}}</p>
-                                <p class="stats-text">{{pokemon?.height}}</p>
-                                <p class="stats-text">{{pokemon?.weight}}</p>
-                                <p class="stats-text">{{pokemon!.abilities[0]}}</p>
-                            </div> -->
                             <div class="stats">
                                 <p class="stats-text">Shape: {{specie?.shape?.name}}</p>
                                 <p class="stats-text">Happiness: {{specie?.base_happiness}}</p>
                                 <p class="stats-text">Capture Rate: {{specie?.capture_rate}}</p>
                                 <p class="stats-text">Egg group: {{specie!.egg_groups[0].name}}</p>
                             </div>
-                            <!-- <div class="stats">
-                                <p class="stats-text">{{specie?.shape?.name}}</p>
-                                <p class="stats-text">{{specie?.base_happiness}}</p>
-                                <p class="stats-text">{{specie?.capture_rate}}</p>
-                                <p class="stats-text">
-                                    {{specie!.egg_groups[0].name}}
-                                </p> 
-                            </div> -->
                         </div>
-                    </div>
-                </div>
-    
-                <div class="section-container">
-                    <p class="section-title flex-1">Stats</p>
-                    <div class="section-content flex-2">
-                        <app-statistics-bars 
-                                *ngFor="let stat of pokemon?.stats" 
-                                [statName]="stat.stat | titlecase" 
-                                [statValue]="stat.valueStat"
-                                [color]="color">
-                        </app-statistics-bars>
                     </div>
                 </div>
     
