@@ -1,38 +1,41 @@
 <div *ngIf="!(error$ | async); else error" class="main" [class]="color">  
-    <div>
+    <div class="icon"
+    (click)="onBack()">
+    <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+</div>
+    <div class="content ">
         <div class="card">
             <div class="card-header">
-                <div 
-                    class="icon"
-                    (click)="onBack()">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>
-                </div>
                 <div class="card-img-container">
-                    <mat-spinner 
-                        class="card-spinner"
-                        *ngIf="(isLoading$ | async); else img"></mat-spinner>
-                    <ng-template #img>
-                        <img class="card-img-info" [src]="pokemon?.img">
-                    </ng-template>
-                    <p>{{text}}</p>
-                </div>
-                <div class="card-title-group">
-                    <div class="card-title">
-                        <p>{{pokemon?.name}}</p>
-                        <div class="card-types">
-                            <mat-chip-list
-                                cdkDropListOrientation="horizontal"
-                                >
-                                <mat-chip 
-                                    *ngFor="let type of pokemon?.types"
-                                    class="card-chip">
-                                    {{type.type }}
-                                </mat-chip>
-                            </mat-chip-list>
+                    <div class="flex-1">
+                        <div class="card-subtitle">
+                            <p class="poke-number">#{{pokemon?.id?.toString()?.padStart(3, '0')}}</p>
+                        </div> 
+                        <div class="basic-info">
+                            <div>
+                                <span *ngFor="let type of pokemon?.types" class="poke-type">
+                                    {{type.type | uppercase}}
+                                </span>
+                            </div>
+                            <p class="poke-name">{{pokemon?.name ? pokemon?.name : '' | titlecase}}</p>
+                        </div>
+                        <div class="stats">
+                            <div class="stats-cont"><p class="m-0">Height</p> <p class="m-0">{{pokemon?.height}}</p></div>
+                            <div class="stats-cont"><p class="m-0">Weight</p> <p class="m-0">{{pokemon?.weight}}</p></div>
+                            <div class="stats-cont"><p class="m-0">Habitat</p> <p class="m-0">{{specie?.habitat?.name | titlecase}}</p></div>
                         </div>
                     </div>
-                    <div class="card-subtitle">#{{pokemon?.id?.toString()?.padStart(3, '0')}}</div> 
+                    <div class="flex-1">
+                        <mat-spinner 
+                            class="card-spinner"
+                            *ngIf="(isLoading$ | async); else img"></mat-spinner>
+                        <ng-template #img>
+                            <img class="card-img-info" [src]="pokemon?.img">
+                        </ng-template>
+                    </div>
                 </div>
+                <!-- <p>{{text}}</p> -->
+
             </div>
         </div>
         <div class="spaces">

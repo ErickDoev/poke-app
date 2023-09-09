@@ -1,27 +1,33 @@
 .main{
     height: 100%;
     width: 100vw;
+    display: flex;
+    justify-content: center;
 }
+ .content{
+   width: 800px;   
+ }
 
 .card{
     width: 100%;
     border-radius: 0 0 20px 0;
+    margin-top: 50px;
 }
 
 .card-header{
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 25px 50px;
     justify-content: space-between;
 }
 
 .card-img-container{
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .card-title-group{
@@ -122,6 +128,8 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+    position: relative;
+    top: 20px;
 }
 
 .error{
@@ -147,5 +155,56 @@
   }
 
   .spaces{
-    padding: 25px 125px;
+    max-width: 900px;
   }
+
+.poke-name{
+    font-weight: 600;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.stats{
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+}
+
+.m-0{
+    margin: 0px;
+}
+
+.basic-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.poke-type{
+    color: darken(#FFFFFF, 10%);
+}
+
+.stats-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.poke-number{
+    font-size: 60px;
+    color: white;
+}
