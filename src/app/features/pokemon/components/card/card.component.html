@@ -1,16 +1,15 @@
-<div class="list-container-item">
+<div class="list-container-item pointer" (click)="onViewPokemon()">
   <mat-card class="card">
     <div class="card-img">
       <img mat-card-image [src]="imgUrl" alt="name">
     </div>
     <mat-card-content>
       <div class="card-text">
-        <a 
+        <span
           class="text" 
-          [routerLink]="['/pokemons', id]"
         >
           {{name | titlecase}}
-        </a>
+        </span>
       </div>
       <p>
         # {{id}}
