@@ -202,7 +202,7 @@ export interface PokemonUtilInfo {
     stats: UtilStat[];
     base_experience: number;
     height: number;
-    name: String;
+    name: string;
     order: number;
     weight: number;
     abilities: string[];

@@ -17,7 +17,7 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
   color: string | undefined;
   text: string | undefined;
 
-  pokemon?: PokemonUtilInfo | null;
+  pokemon!: PokemonUtilInfo | null;
   isLoading$ = this.pokemonFacade.isLoading$;
   error$ = this.pokemonFacade.error$;
   pokemonSubscription$: Subscription | undefined;
