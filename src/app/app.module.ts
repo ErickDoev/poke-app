@@ -16,7 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import { pokemonSpecie } from './store/reducers/pokemon/get-specie.reducer';
 import { allPokemonReducer } from './store/reducers/pokemon/get-all-pokemons.reducer';
 import { FiltroPipe } from './pipes/filtro.pipe';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,6 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

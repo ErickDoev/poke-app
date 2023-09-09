@@ -32,66 +32,69 @@
                         <img class="card-img-info" [src]="pokemon?.img">
                     </ng-template>
                     <p>{{text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+        <mat-tab label="About">
+            <div class="about">
+                <p>About</p>
+                <div class="table">
+                    <div>
+                        <p class="cgray">Habitat</p>
+                        <p class="cgray">Height:</p>
+                        <p class="cgray">Weight:</p>
+                        <p class="cgray">Abilities</p>
+                    </div>
+                    <div>
+                        <p>{{specie?.habitat?.name | titlecase}}</p>
+                        <p>{{pokemon?.height}}</p>
+                        <p>{{pokemon?.weight}}</p>
+                        <p *ngFor="let type of pokemon?.abilities" class="inline">
+                            {{type | titlecase}}, &nbsp;
+                        </p> 
+                    </div>
+                    <div>
+                        <p class="cgray">Shape</p>
+                        <p class="cgray">Happiness</p>
+                        <p class="cgray">Capture Rate:</p>
+                        <p class="cgray">Egg group:</p>
+                    </div>
+                    <div>
+                        <p>{{specie?.shape?.name}}</p>
+                        <p>{{specie?.base_happiness}}</p>
+                        <p>{{specie?.capture_rate}}</p>
+                        <p *ngFor="let egg of specie?.egg_groups" class="inline">
+                            {{egg.name}}, &nbsp;
+                        </p> 
                     </div>
                 </div>
             </div>
-        </div>
-    <div class="poke-info">
-        <div class="about">
-            <p>About</p>
-            <div class="table">
-                <div>
-                    <p class="cgray">Habitat</p>
-                    <p class="cgray">Height:</p>
-                    <p class="cgray">Weight:</p>
-                    <p class="cgray">Abilities</p>
-                </div>
-                <div>
-                    <p>{{specie?.habitat?.name | titlecase}}</p>
-                    <p>{{pokemon?.height}}</p>
-                    <p>{{pokemon?.weight}}</p>
-                    <p *ngFor="let type of pokemon?.abilities" class="inline">
-                        {{type | titlecase}}, &nbsp;
-                    </p> 
-                </div>
-                <div>
-                    <p class="cgray">Shape</p>
-                    <p class="cgray">Happiness</p>
-                    <p class="cgray">Capture Rate:</p>
-                    <p class="cgray">Egg group:</p>
-                </div>
-                <div>
-                    <p>{{specie?.shape?.name}}</p>
-                    <p>{{specie?.base_happiness}}</p>
-                    <p>{{specie?.capture_rate}}</p>
-                    <p *ngFor="let egg of specie?.egg_groups" class="inline">
-                        {{egg.name}}, &nbsp;
-                    </p> 
-                </div>
+        </mat-tab>
+        <mat-tab label="Statistics">
+            <div class="statistics">
+                <p>Statistics</p>
+                <app-statistics-bars 
+                    *ngFor="let stat of pokemon?.stats" 
+                    [statName]="stat.stat | titlecase" 
+                    [statValue]="stat.valueStat"
+                    [color]="color">
+            
+                </app-statistics-bars>
             </div>
-        </div>
-        
-        <div class="statistics">
-            <p>Statistics</p>
-            <app-statistics-bars 
-                *ngFor="let stat of pokemon?.stats" 
-                [statName]="stat.stat | titlecase" 
-                [statValue]="stat.valueStat"
-                [color]="color">
-        
-            </app-statistics-bars>
-        </div>
-        
-        <div class="moves">
-            <p>Moves</p>
-            <mat-chip-list cdkDropListOrientation="horizontal">
-                <mat-chip *ngFor="let move of pokemon?.moves">
-                    {{move}}
-                </mat-chip>
-            </mat-chip-list>
-        </div>
-    </div>
-
+        </mat-tab>
+        <mat-tab label="Moves">
+            <div class="moves">
+                <p>Moves</p>
+                <mat-chip-list cdkDropListOrientation="horizontal">
+                    <mat-chip *ngFor="let move of pokemon?.moves">
+                        {{move}}
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+        </mat-tab>
+      </mat-tab-group>
 </div>
 
 <ng-template #error>

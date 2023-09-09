@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [ 
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
     MatCardModule,
     MatChipsModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
   ], 
   exports:[PokemonInfoComponent]
 })
