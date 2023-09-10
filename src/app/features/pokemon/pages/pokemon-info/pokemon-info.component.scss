@@ -12,7 +12,7 @@
 .card{
     width: 100%;
     border-radius: 0 0 20px 0;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .card-header{
@@ -43,10 +43,12 @@
 
 .card-img-info{
     width: 350px;
+    max-height: 300px;
 }
 
 .card-spinner{
-    width: 15rem;
+    width: 300px;
+    height: 300px;
 }
 
 .card-title{
@@ -72,15 +74,15 @@
 } 
 
 .yellow{
-    background: linear-gradient(#BDBD00,darken($color: #BDBD00, $amount: 15%));
+    background: linear-gradient(#BDBD00,darken($color: #BDBD00, $amount: 10%));
 }
 
 .blue{
-    background: linear-gradient(#43ccff,darken($color: #43ccff, $amount: 15%));
+    background: linear-gradient(#43ccff,darken($color: #43ccff, $amount: 25%));
 }
 
 .brown{
-    background: linear-gradient(#A52A2A,darken($color: #A52A2A, $amount: 15%));
+    background: linear-gradient(#A52A2A,darken($color: #A52A2A, $amount: 10%));
 }
 
 .white{
@@ -100,7 +102,7 @@
 }
 
 .purple{
-    background: linear-gradient(#800080,darken($color: #800080, $amount: 15%));
+    background: linear-gradient(#9b019b,darken($color: #9b019b, $amount: 10%));
 }
 
 .table{
@@ -211,7 +213,7 @@
     color: rgb(255,255,255,0.3);
     font-size: 300px;
     right: 0px;
-    top: -120px;
+    top: -130px;
 }
 
 .h-245{
@@ -265,4 +267,38 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 16px;
+    z-index: 9;
+    position: relative;
+}
+
+.w-100{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img-container{
+    width: 300px;
+    height: 300px;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-900px{
+    width: 900px;
+}
+
+.poke-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+}
+
+.basic-info-cont{
+    display: flex;
+    flex-direction: row;
 }

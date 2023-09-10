@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { PokemonUtilInfo, Specie } from 'src/app/models/pokemon.model';
@@ -26,30 +26,50 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
   specieSubscription$: Subscription | undefined;
 
   constructor(
-    private route: ActivatedRoute,
     private pokemonFacade: GetPokemonsFacade,
     private specieFacade: GetSpecieFacade,
-    private router: Router) { }
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.pokemonFacade.fetch(Number(this.id));    
+    this.activatedRoute.params.subscribe((params) => {
+      if(params['id']){
+        this.id = params['id'];
+        this.searchPokemon(params['id']);
+      }
+    });
+  }
+
+  onBack(){
+    this.router.navigateByUrl('pokemons')
+  }
+
+  onNextPokemon(): void{
+    const id = Number(this.id) + 1;
+    this.router.navigate(['pokemons', id]);
+  }
+
+  onPrevPokemon(): void{
+    const id = Number(this.id) - 1;
+    if(id >= 1){
+      this.router.navigate(['pokemons', id]);
+    }
+  }
+
+  searchPokemon(id: string): void {
+    this.pokemonFacade.fetch(Number(id));    
 
     this.pokemonSubscription$ = this.pokemonFacade.entity$.subscribe(poke => {
       this.pokemon = poke;
-    })
+    });
 
-    this.specieFacade.fetch(Number(this.id));
+    this.specieFacade.fetch(Number(id));
 
     this.specieSubscription$ = this.specieFacade.entity$.subscribe(ent => {
       this.specie = ent;
       this.color = ent?.color.name;
       this.text = ent?.flavor_text_entries[0].flavor_text;
-    })
-  }
-
-  onBack(){
-    this.router.navigateByUrl('pokemons')
+    }); 
   }
 
   ngOnDestroy(): void {
