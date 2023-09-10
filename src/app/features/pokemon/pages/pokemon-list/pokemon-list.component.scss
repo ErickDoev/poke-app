@@ -73,9 +73,12 @@ a{
     align-items: center;
     width: 100%;
     position: absolute;
-    top: 30px;
+    top: 50px;
 
     & .logo{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         width: 350px;
         & .img{
             width: 100%;

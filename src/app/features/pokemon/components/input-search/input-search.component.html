@@ -1,23 +1,25 @@
 <div class="input-search">
     <div class="form-container">
-        <form [formGroup]="form">
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Search Pokemon</mat-label>
+        <form [formGroup]="form" class="form">
+            <div class="input-container">
                 <input 
-                    matInput type="text" 
-                    formControlName="pokemon"
+                    class="input"
+                    type="text" 
+                    placeholder="Search pokemon"
                     autocomplete="off"
+                    formControlName="pokemon"
                     [matAutocomplete]="auto"
-                    />
-                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                        <mat-option *ngFor="let pokemon of filteredPokemons " [value]="pokemon.id">
-                            <div (click)="onClick(pokemon)">
-                                {{pokemon.name}}
-                            </div>
-                        </mat-option>
-                      </mat-autocomplete>
-                <mat-icon matPrefix>search</mat-icon>
-              </mat-form-field>
+                >
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option 
+                        *ngFor="let pokemon of filteredPokemons " 
+                        [value]="pokemon.id"
+                        (click)="onClick(pokemon)">
+                        {{pokemon.name}}
+                    </mat-option>
+                  </mat-autocomplete>
+                <mat-icon>search</mat-icon>
+              </div>
         </form>
     </div>
 </div>
