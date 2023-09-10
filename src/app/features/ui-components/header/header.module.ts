@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { InputSearchModule } from '../../pokemon/components/input-search/input-search.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -11,7 +12,8 @@ import { InputSearchModule } from '../../pokemon/components/input-search/input-s
     CommonModule,
     MatMenuModule,
     MatIconModule,
-    InputSearchModule
+    InputSearchModule,
+    RouterModule
   ],
   exports: [HeaderComponent]
 })

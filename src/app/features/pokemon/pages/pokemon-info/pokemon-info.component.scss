@@ -251,7 +251,7 @@
 }
 
 ::ng-deep .mat-chip-list-wrapper{
-    margin: o;
+    margin: 0;
 }
 
 .search{
@@ -301,4 +301,34 @@
 .basic-info-cont{
     display: flex;
     flex-direction: row;
+}
+
+.line-cont{
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+.line-c{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    width: 1px;
+    height: 100px;
+    border-right: solid 1px white;
+    margin-top: 5px;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+}
+
+.img-github{
+    width: 100%;
+    height: auto;
 }
