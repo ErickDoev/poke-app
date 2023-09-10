@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { InputSearchModule } from '../../pokemon/components/input-search/input-search.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -12,7 +11,6 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatMenuModule,
     MatIconModule,
-    InputSearchModule,
     RouterModule
   ],
   exports: [HeaderComponent]
