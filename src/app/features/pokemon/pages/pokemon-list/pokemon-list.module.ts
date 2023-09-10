@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardModule } from '../../components/card/card.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
-import { InputSearchModule } from '../../components/input-search/input-search.module';
 import { HeaderModule } from 'src/app/features/ui-components/header/header.module';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -26,7 +25,6 @@ const routes: Routes = [
     CardModule,
     MatGridListModule,
     MatButtonModule,
-    InputSearchModule,
     HeaderModule,
     MatIconModule
   ], 

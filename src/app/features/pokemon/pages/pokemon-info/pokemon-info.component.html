@@ -1,7 +1,12 @@
 <div *ngIf="!(error$ | async); else error" class="main" [class]="color">  
-    <div class="icon"
-        (click)="onBack()">
-        <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+    <div class="menu">
+        <div class="icon"
+            (click)="onBack()">
+            <mat-icon aria-hidden="false" aria-label="Back">arrow_back</mat-icon>
+        </div>
+        <div class="search">
+            <app-input-search></app-input-search>
+        </div>
     </div>
     <div class="content">
         <div class="icon-pag">
