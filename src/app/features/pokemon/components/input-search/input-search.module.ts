@@ -5,7 +5,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { FiltroPipe } from 'src/app/pipes/filtro.pipe';
 import { RouterModule } from '@angular/router';
-
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatInputModule,
     MatTableModule,
-    RouterModule
+    RouterModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   exports: [
     InputSearchComponent

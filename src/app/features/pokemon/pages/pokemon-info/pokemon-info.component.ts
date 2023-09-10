@@ -22,7 +22,7 @@ export class PokemonInfoComponent implements OnInit, OnDestroy {
   error$ = this.pokemonFacade.error$;
   pokemonSubscription$: Subscription | undefined;
 
-  specie?: Specie | null;
+  specie!: Specie | null;
   specieSubscription$: Subscription | undefined;
 
   constructor(

@@ -1,28 +1,22 @@
 <div class="input-search">
     <div class="form-container">
-        <form>
-            <mat-form-field class="example-full-width" appearance="fill">
+        <form [formGroup]="form">
+            <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Search Pokemon</mat-label>
                 <input 
                     matInput type="text" 
-                    #txtSeacrh
+                    formControlName="pokemon"
                     autocomplete="off"
-                    (keyup)="onSearchPokemon(txtSeacrh.value)"/>
+                    [matAutocomplete]="auto"
+                    />
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let pokemon of filteredPokemons " [value]="pokemon.id">
+                            <div (click)="onClick(pokemon)">
+                                {{pokemon.name}}
+                            </div>
+                        </mat-option>
+                      </mat-autocomplete>
               </mat-form-field>
         </form>
-        <div 
-            *ngIf="search.length > 0"
-            class="form-table">
-            <table *ngIf="search.length > 0" class="table">
-                <tr>
-                  <th>Pokemons: </th>
-                </tr>
-                <tr *ngFor="let pokemon of pokemons! | filtro:search">
-                    <hr>
-                    <a [routerLink]="[id]"><td (click)="onClick(pokemon)">{{pokemon.name}}</td></a>
-                </tr>
-              </table>
-
-        </div>
     </div>
 </div>
