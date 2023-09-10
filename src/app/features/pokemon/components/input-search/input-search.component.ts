@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { debounce, debounceTime } from 'rxjs';
-import { Pokemon, PokemonListResponse, Result } from 'src/app/models/pokemon.model';
+import { debounceTime } from 'rxjs';
+import { Result } from 'src/app/models/pokemon.model';
 import { GetAllPokemonListFacade } from 'src/app/store/facades/pokemon/get-all-pokemons.facade';
 
 
@@ -15,12 +15,7 @@ export class InputSearchComponent implements OnInit {
 
   pokemons!: Result[] | undefined;
   filteredPokemons: any = [];
-
-  displayedColumns: string[] = ['name'];
-
-  search: string = '';
   id: string = '';
-
   form!: FormGroup;
 
   constructor(
@@ -28,10 +23,6 @@ export class InputSearchComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router
   ) { }
-
-  onSearchPokemon(val: string){
-    this.search = val;
-  }
 
   onClick(row: Result){
     const url = row.url;
