@@ -1,7 +1,7 @@
 <nav ngbNav class="nav">
     <div class="nav-l">
         <img 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_bJfMI_7Y8q1afFWdvchzgAZOtkuTX-fgKRyFOwgFKTZrYdufSWZZKUBUgCdgUPXk07w&usqp=CAU" alt="logo"
+          src="assets/pokeballmenu.png" alt="logo"
           class="img">
         <p class="img-p">PokeApp v1.1</p>
     </div>
@@ -10,7 +10,7 @@
             mat-icon-button 
             [matMenuTriggerFor]="menu" 
             aria-label="Example icon-button with a menu"
-            class="red">
+            class="white">
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
@@ -27,6 +27,13 @@
               routerLink="/about-me">
                 <mat-icon>person</mat-icon>
                 <span>About me</span>
+              </button>
+              <button 
+                mat-menu-item 
+                ngbNavLink 
+                routerLink="/home">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
               </button>
           </mat-menu>
     </div>

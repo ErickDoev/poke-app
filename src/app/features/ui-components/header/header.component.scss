@@ -6,12 +6,13 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    background: white;
-    border-bottom: solid 1px black;
+    top: 10px;
+    background: transparent;
+    position: fixed;
 }
 
-.red{
-    background-color: white;
+.white{
+    background-color: transparent;
     border: 0;
 }
 .nav-l, .nav-r{
