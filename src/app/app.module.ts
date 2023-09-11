@@ -25,7 +25,13 @@ import {MatTabsModule} from '@angular/material/tabs';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({ pokemon: pokemonReducer, pokemonList: pokemonListReducer, specie: pokemonSpecie, allPokemonList: allPokemonReducer}), 
+    StoreModule
+      .forRoot({ 
+        pokemon: pokemonReducer, 
+        pokemonList: pokemonListReducer, 
+        specie: pokemonSpecie, 
+        allPokemonList: allPokemonReducer
+    }), 
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production

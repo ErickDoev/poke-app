@@ -1,0 +1,77 @@
+.main{
+    width: 100vw;
+    height: 100%;
+    background-image: url('/assets/pokemon-land.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.diago{
+    width: 700px;
+    height: 1500px;
+    transform: rotate(7deg);
+    position: relative;
+    top: -100px;
+    left: -100px;
+    //background-image: linear-gradient(to top, #00b4db, #0083b0);
+    //background-image: linear-gradient( 109.6deg, #00b4db 11.2%, #0083b0 91.1% );
+    background-color: rgba(0,0,0,0.7);
+}
+
+.text{
+    position: absolute;
+    top: calc(50% - 300px);
+    left: 100px;
+    width: 500px;
+    color: white;
+}
+
+.poke-text{
+    font-size: 100px;
+    font-weight: 500;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.proto-text{
+    font-size: 95px;
+    font-weight: 500;
+
+    margin-bottom: 0;
+}
+
+.version-text{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.body{
+    width: 100%;
+    flex-direction: column;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+
+.footer{
+    width: 100%;
+    flex-direction: column;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+
+    & a{
+        color: white;
+    }
+}
