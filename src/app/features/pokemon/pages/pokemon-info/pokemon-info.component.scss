@@ -335,3 +335,111 @@
     width: 100%;
     height: auto;
 }
+
+@media screen  and (max-width:920px){
+
+    .main{
+        height: auto;
+    }
+
+    .card-img-container{
+        flex-direction: column-reverse;
+        gap: 0;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .card-header{
+        padding: 0;
+    }
+
+    .card{
+        margin: 0;
+    }
+
+    .w-900px{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-header{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .poke-number{
+        width: 100%;
+        font-size: 170px;
+        top: -100px;
+        text-align: center;
+        position: initial;
+        margin: 0;
+        color: white;
+    }
+
+    .poke-img{
+        display: none;
+    }
+
+    .icon-pag{
+        position: fixed;
+        bottom: 10px;
+        color: rgba(255,255,255,0.7);
+        margin: 10px;
+        bottom: 50%;
+        
+        & .icon-arrow{
+            font-size: 40px;
+        }
+
+        & .mat-icon{
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .flex-1{
+        width: 100%;
+    }
+
+    .card-img-info, .card-spinner{
+        width: 100%;
+    }
+
+    .stats{
+        padding: 5px;
+    }
+
+    .section-container{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-content{
+        width: 100%;
+    }
+
+    .h-245{
+        height: auto;
+        overflow-x:initial;
+    }
+
+    .line-cont{
+        display: none;
+    }
+
+    .keyboard_arrow_right{
+        right: 1px;
+    }
+
+    .keyboard_arrow_left{
+        left: 1px;
+    }
+
+    .section-title{
+        margin: 0;
+    }
+
+}

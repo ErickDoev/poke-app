@@ -9,15 +9,15 @@
         </div>
     </div>
     <div class="w-100">
-        <div class="icon-pag" (click)="onPrevPokemon()">
-            <mat-icon>keyboard_arrow_left</mat-icon>
+        <div class="icon-pag keyboard_arrow_left" (click)="onPrevPokemon()">
+            <mat-icon class="icon-arrow">keyboard_arrow_left</mat-icon>
         </div>
         <div class="w-900px">
             <div class="card">
                 <div class="card-header relative">
                     <p class="poke-number absolute">#{{pokemon?.id?.toString()?.padStart(3, '0')}}</p>
                     <div class="card-img-container">
-                        <div class="flex-1">
+                        <div class="flex-1 info-responsive">
                             <div class="basic-info-cont">
                                 <img 
                                     src="assets/pokeball.png" alt="logo"
@@ -96,8 +96,8 @@
                 </div>
             </div>
         </div>
-        <div class="icon-pag" (click)="onNextPokemon()">
-            <mat-icon>keyboard_arrow_right</mat-icon>
+        <div class="icon-pag keyboard_arrow_right" (click)="onNextPokemon()">
+            <mat-icon class="icon-arrow">keyboard_arrow_right</mat-icon>
         </div>
     </div>
 
