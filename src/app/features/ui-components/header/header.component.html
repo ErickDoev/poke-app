@@ -1,40 +1,13 @@
-<nav ngbNav class="nav">
-    <div class="nav-l">
-        <img 
-          src="assets/pokeballmenu.png" alt="logo"
-          class="img">
-        <p class="img-p">PokeApp v1.1</p>
+<nav class="nav">
+  <div class="nav-l">
+    <div class="nav-item" routerLinkActive="active" routerLink="/home">
+      <a>Home</a>
     </div>
-    <div class="nav-r">
-        <button 
-            mat-icon-button 
-            [matMenuTriggerFor]="menu" 
-            aria-label="Example icon-button with a menu"
-            class="white">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button 
-              mat-menu-item 
-                ngbNavLink
-                routerLink="/pokemons">
-              <mat-icon>dialpad</mat-icon>
-              <span>Pokemon list</span>
-            </button>
-            <button 
-              mat-menu-item 
-              ngbNavLink 
-              routerLink="/about-me">
-                <mat-icon>person</mat-icon>
-                <span>About me</span>
-              </button>
-              <button 
-                mat-menu-item 
-                ngbNavLink 
-                routerLink="/home">
-                <mat-icon>home</mat-icon>
-                <span>Home</span>
-              </button>
-          </mat-menu>
+    <div class="nav-item" routerLinkActive="active" routerLink="/pokemons">
+      <a>Pokemon list</a>
     </div>
+    <div class="nav-item" routerLinkActive="active" routerLink="/about-me">
+      <a>About</a>
+    </div>
+  </div>
 </nav>

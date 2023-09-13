@@ -15,7 +15,7 @@
                         *ngFor="let pokemon of filteredPokemons " 
                         [value]="pokemon.id"
                         (click)="onClick(pokemon)">
-                        {{pokemon.name}}
+                        {{pokemon.name | titlecase}}
                     </mat-option>
                   </mat-autocomplete>
                 <mat-icon>search</mat-icon>
